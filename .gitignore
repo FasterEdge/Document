@@ -1,0 +1,44 @@
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+Desktop.ini
+.Trash-*
+
+# Editors / IDE
+*~
+*.swp
+*.swo
+*.bak
+*.tmp
+.vscode/
+.idea/
+*.iml
+
+# Generated / build artifacts
+*.log
+*.out
+build/
+dist/
+tmp/
+*.exe
+*.dll
+*.so
+*.dylib
+*.tar
+*.tar.gz
+*.zip
+
+# Secrets / local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Git worktrees
+.worktrees/
