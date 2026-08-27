@@ -1,30 +1,26 @@
 # ProxyArea 测试
 
-仓库提供 `examples/testserver/main.go`，会回显 method、path、query、header 和 body。
+自动验证：
 
 ```bash
-# 上游测试服务
-go run examples/testserver/main.go -addr=:8081
-
-# 代理
-go run . --addr=:8080 --key=test-secret --allow-hosts=127.0.0.1
+gofmt -d .
+go vet ./...
+go test ./...
+go test -race ./...
+go test -cover ./...
 ```
 
-## 测试矩阵
+`proxy_test.go` 使用 `httptest` 覆盖旧路由、通用路由、七个别名和扩展方法；各方法二进制 body；query/form/multipart/envelope；Bearer/X-Proxy-Key 认证优先级；URL 单次解码和重复参数；动态 hop-by-hop Header；多值响应；白名单重定向；错误与超时映射。
+
+手工测试：
 
 ```bash
-curl "http://127.0.0.1:8080/get?url=http://127.0.0.1:8081/test/get&key=test-secret"
-
-curl -X POST \
-  "http://127.0.0.1:8080/post?url=http://127.0.0.1:8081/test/post&key=test-secret" \
-  -H 'Content-Type: application/json' -d '{"x":1}'
-
-curl -X PUT \
-  "http://127.0.0.1:8080/proxy?url=http://127.0.0.1:8081/test/put&key=test-secret" \
-  -d 'payload'
-
-curl "http://127.0.0.1:8080/get?url=http://example.net/&key=test-secret"
-# 预期：403，不在 allow-hosts
+go run ./examples/testserver -addr=:8081
+go run . --addr=:8080 --key=test-secret --allow-hosts=127.0.0.1,localhost
+curl -X PROPFIND -H 'Authorization: Bearer test-secret' \
+  'http://127.0.0.1:8080/proxy?url=http%3A%2F%2Flocalhost%3A8081%2Ftest%2Fall' -d 'payload'
+curl -X GET -H 'X-Proxy-Key: test-secret' \
+  'http://127.0.0.1:8080/proxy/patch?url=http%3A%2F%2Flocalhost%3A8081%2Ftest%2Fall' -d 'patch-body'
 ```
 
-同时测试缺 key、错误 key、空 URL、超时、TLS 上游和大响应流式转发。
+测试服务器回显原始 body 文本与 base64、方法、query 和 Header，并提供 `/redirect?to=...`、`/delay?duration=100ms`、`/headers`。仓库 `test_usage.md` 包含 form、multipart、四种 envelope 编码及预期错误的完整命令。
