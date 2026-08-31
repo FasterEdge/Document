@@ -1,6 +1,6 @@
 # FasterEdge 文档中心
 
-> 文档基线版本：`1.0.20260826`
+> 文档基线版本：`1.0.20260831`
 
 本仓库集中维护 FasterEdge 主框架与配套组件的公开文档。组件源码仓库仍是实现、参数和版本的最终依据；这里提供跨仓库导航、架构说明、部署手册、安全建议和组合示例。
 
@@ -15,6 +15,9 @@
 | SimpleTimeService | 本机/NTP UTC 时间服务 | [文档](SimpleTimeService/README.md) | [仓库](https://github.com/FasterEdge/SimpleTimeService) |
 | TsnHub | 本地 IPC 与 OPC UA/TSN 桥接设计 | [文档](TsnHub/README.md) | [仓库](https://github.com/FasterEdge/TsnHub) |
 | Example | 示例仓库状态与现有 demo 入口 | [文档](Example/README.md) | [仓库](https://github.com/FasterEdge/Example) |
+| FasterEdgeDoctor | 本地/远程仓库与运行状态诊断工具 | — | [仓库](https://github.com/FasterEdge/FasterEdgeDoctor) |
+| MCU / FPGA 移植 | Arduino、PlatformIO、Keil、MounRiver、Vivado 等硬件实现 | — | [组织仓库](https://github.com/FasterEdge) |
+| RelayNode | SW2MQTT、SW2USB 硬件节点工程 | — | [组织仓库](https://github.com/FasterEdge) |
 
 ## 推荐阅读顺序
 
@@ -30,7 +33,7 @@
 
 - 本仓库仅包含公开技术文档，不复制 `PrivateDocument` 中的专利、软著、登记材料和内部信息。
 - 示例中的密钥、地址和路径均为占位值，不应直接用于生产。
-- README 中的历史版本仅用于变更记录；当前运行基线统一为 `1.0.20260826`。
+- README 中的历史版本仅用于变更记录；当前运行基线统一为 `1.0.20260831`。
 
 ## 维护原则
 
