@@ -18,7 +18,7 @@ chmod 755 /path/to/program
 
 ## `/shutdown` 后又重启
 
-当前版本 `1.0.20260826` 已通过 `StoppedByRequest` 阻止主动停止后的自动重启。确认运行的是新二进制。
+当前版本 `1.0.20260831` 已通过 `StoppedByRequest` 阻止主动停止后的自动重启。确认运行的是新二进制。
 
 ## 探针持续失败
 

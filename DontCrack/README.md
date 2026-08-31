@@ -1,6 +1,6 @@
 # DontCrack 进程管理器
 
-- 版本：`1.0.20260826`
+- 版本：`1.0.20260831`
 - 平台：OpenHarmony、Android、通用 Linux、Windows
 
 DontCrack 托管一个目标进程，捕获 stdout/stderr，提供自动重启、主动启停、日志缓存/落盘、健康探针、Prometheus 指标和 Web UI。

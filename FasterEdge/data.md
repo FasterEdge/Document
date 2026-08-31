@@ -9,7 +9,7 @@
 
 ## BaseData
 
-`info` 返回 FasterEdge 当前版本 `1.0.20260826` 和框架描述。
+`info` 返回 FasterEdge 当前版本 `1.0.20260831` 和框架描述。
 
 ## NetMapData
 

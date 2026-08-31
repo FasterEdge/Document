@@ -1,6 +1,6 @@
 # TsnHub
 
-- 项目版本：`1.0.20260826`
+- 项目版本：`1.0.20260831`
 - 源码：https://github.com/FasterEdge/TsnHub
 - 语言：C++17、CMake、CLI11、open62541
 

@@ -1,6 +1,6 @@
 # SimpleWebShell
 
-- 版本：`1.0.20260826`
+- 版本：`1.0.20260831`
 - 源码：https://github.com/FasterEdge/SimpleWebShell
 - 默认端口：8878
 

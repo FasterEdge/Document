@@ -12,8 +12,8 @@ CLI 保持兼容：`--addr`、`--key`、`--https`、`--cert_file`、`--key_file`
 ## Docker
 
 ```bash
-docker build -t proxyarea:1.0.20260826 .
-docker run -d --name proxyarea -p 127.0.0.1:8080:8080 proxyarea:1.0.20260826 \
+docker build -t proxyarea:1.0.20260831 .
+docker run -d --name proxyarea -p 127.0.0.1:8080:8080 proxyarea:1.0.20260831 \
   --key=<secret> --allow-hosts=api.example.com
 ```
 
