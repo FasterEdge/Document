@@ -1,5 +1,5 @@
 # FasterEdge 开源项目 - Github: https://github.com/FasterEdge - Gitee: https://gitee.com/FasterEdge
-# 纯文档仓库 CI: markdownlint 检查(宽松配置, 仅语法/链接类规则)。
+# 纯文档仓库 CI: markdownlint 检查(宽松配置, 仅保留结构/链接类规则)。
 name: 'Markdown 检查(markdownlint)'
 
 on:
@@ -20,5 +20,5 @@ jobs:
           node-version: '22'
       - name: '安装 markdownlint-cli2'
         run: npm install -g markdownlint-cli2
-      - name: 'Markdown 检查(自动发现 .markdownlint-cli2.json)'
-        run: markdownlint-cli2 '**/*.md' '#.git/**'
+      - name: 'Markdown 检查(宽松规则)'
+        run: markdownlint-cli2 '**/*.md' '#.git/**' --config .markdownlint-cli2.json
