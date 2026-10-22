@@ -6,7 +6,7 @@
 
 ### 1. Introduction
 
-- **Documentation baseline**: `1.0.20260831`
+- **Documentation baseline**: `1.0.20261022`
 - **Purpose**: this repository centrally maintains public documentation for the FasterEdge core framework and its supporting components.
 - **Source of truth**: each component's source repository remains authoritative for implementation details, parameters and versions. This repository provides cross-repository navigation, architecture descriptions, deployment guides, security recommendations and composition examples.
 
@@ -39,7 +39,7 @@
 
 - **Public content only**: this repository contains public technical documentation only. It does not duplicate patents, software-copyright materials, registration documents or internal information from `PrivateDocument`.
 - **Placeholder examples**: keys, addresses and paths shown in examples are placeholders and must not be used directly in production.
-- **Current baseline**: historical versions in README files are retained only as change records; the unified current runtime baseline is `1.0.20260831`.
+- **Current baseline**: historical versions in README files are retained only as change records; the unified current runtime baseline is `1.0.20261022`.
 
 ### 5. Maintenance Principles
 
