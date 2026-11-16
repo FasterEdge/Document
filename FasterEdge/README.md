@@ -1,6 +1,6 @@
 # FasterEdge 主框架
 
-- 版本：`1.0.20261022`
+- 版本：`1.0.20261116`
 - 源码：https://github.com/FasterEdge/FasterEdge
 - 语言：Go
 

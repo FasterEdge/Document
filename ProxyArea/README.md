@@ -1,6 +1,6 @@
 # ProxyArea
 
-- 版本：`1.0.20261022`
+- 版本：`1.0.20261116`
 - 源码：https://github.com/FasterEdge/ProxyArea
 - 实现：Go 标准库 `net/http`，免 CGO
 
